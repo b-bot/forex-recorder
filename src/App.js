@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Api from './Api.js';
 import Graph from './Graph.js';
 
 class App extends Component {
@@ -13,10 +12,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Forex Graph for USD - EUR
         </p>
         <Graph />
-        <Api />
       </div>
     );
   }
