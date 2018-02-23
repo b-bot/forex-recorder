@@ -27,6 +27,16 @@ class Graph extends Component {
         labels: candles.map(t => t.time),
         datasets: [
           {
+            label: 'Opening',
+            data: candles.map(v => v.bid.o),
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(40,215,40,1)",
+            pointColor: "rgba(40,215,40,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(40,215,40,1)",
+          },
+          {
             label: 'High',
             data: candles.map(v => v.bid.h),
             fillColor: "rgba(220,220,220,0.2)",
@@ -40,18 +50,18 @@ class Graph extends Component {
             label: 'Low',
             data: candles.map(v => v.bid.l),
             fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
+            strokeColor: "rgba(40,40,215,1)",
+            pointColor: "rgba(40,40,215,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
+            pointHighlightStroke: "rgba(40,40,215,1)",
           },
           {
-            label: 'Average Closing',
+            label: 'Closing',
             data: candles.map(v => v.bid.c),
             fillColor: "rgba(215, 40, 40, 0)",
-            strokeColor: "rgba(215, 40, 40, 0.9)",
-            pointColor: "rgba(215, 40, 40, 0.9)",
+            strokeColor: "rgba(215, 40, 40, 1)",
+            pointColor: "rgba(215, 40, 40, 1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(215, 40, 40, 1)",
@@ -65,7 +75,10 @@ class Graph extends Component {
 
   render() {
     return (
-      <LineChart data={this.state.chartData} width="1920" height="1080" redraw/>
+      <div>
+        <LineChart data={this.state.chartData} width="1920" height="1080" redraw/>
+      </div>
+
   )}
 };
 
