@@ -36,10 +36,9 @@ class Averagedifference extends Component {
       let suml = integersl.reduce((previous, current) => current += previous);
       let lowavg = suml / integersl.length;
 
-      let avgdiff = sumh - suml;
+      let avgdiff = highavg - lowavg;
 
       this.setState({avgdiff: avgdiff});
-      console.log("state", this.state.avgdiff);
     })
   }
   render() {

@@ -23,7 +23,6 @@ class Latestlow extends Component {
         )
       })
       this.setState({prices: prices});
-      console.log("state", this.state.prices);
     })
   }
   render() {

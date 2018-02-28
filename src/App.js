@@ -16,7 +16,7 @@ class App extends Component {
           <h1 className="App-title">Forex Graph EUR - USD</h1>
         </header>
         <p className="App-intro">
-          Euros to US Dollars monitor using OANDA API to fetch 100 most recent rates in 10 minute intervals.
+          Euros to US Dollars monitor using OANDA API to fetch 100 most recent rates in 10 minute intervals. The mid price points are collected.
         </p>
         <Latesthigh />
         <Latestlow />

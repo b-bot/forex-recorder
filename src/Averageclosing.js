@@ -27,7 +27,6 @@ class Averageclosing extends Component {
       let sum = integers.reduce((previous, current) => current += previous);
       let avg = sum / integers.length;
       this.setState({avg: avg});
-      console.log("state", this.state.avg);
     })
   }
   render() {
